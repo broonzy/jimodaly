@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery Image Scroller with LightBox</title>    
+    <style type="text/css">
+		/* style used for preview page only */
+		html {
+			height:100%;
+			background:#EEE;
+			background:-moz-linear-gradient(top, #FFF 0%, #CCC 100%);
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#CCC));
+    	}
+    	body {
+			width:100%;
+			height:100%;
+			margin:0;
+		}
+		.container {
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin-top:-117px;
+			margin-left:-486px;
+		}
+		table.ex{
+			border:1px solid #666;
+			border-collapse:collapse;
+			border-spacing:0;
+			margin:0;
+		}
+		table.ex th{
+			background-color:#E0E0E0;
+			border:1px solid #666;
+			padding: 6px 12px;
+			text-align:left;
+			vertical-align:top;	
+		}
+		table.ex tr.even td{
+			background-color:#E5ECF9;
+		}
+		table.ex tr.odd td{
+			background-color:#FFF;
+		}
+		table.ex td{
+			border:1px solid #666;
+			padding:6px 12px;
+			text-align:left;
+			vertical-align:top;
+		}
+	</style>
+    <link rel="stylesheet" type="text/css" href="lightbox/wt-lightbox.css"/>
+    <link rel="stylesheet" type="text/css" href="wt-scroller.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.10.custom.min.js"></script>
+    <script type="text/javascript" src="lightbox/js/jquery.wt-lightbox.min.js"></script>
+    <script type="text/javascript" src="js/jquery.wt-scroller.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(	
+			function() {
+				//initialize scroller
+				$(".container").wtScroller({
+					num_display:3,
+					slide_width:300,
+					slide_height:200,
+					slide_margin:1,
+					button_width:35,
+					ctrl_height:25,
+					margin:10,	
+					auto_scroll:true,
+					delay:4000,
+					scroll_speed:1000,
+					easing:"",
+					auto_scale:true,
+					move_one:false,
+					ctrl_type:"scrollbar",
+					display_buttons:true,
+					mouseover_buttons:false,
+					display_caption:true,
+					mouseover_caption:true,
+					caption_effect:"slide",
+					caption_align:"bottom",
+					caption_position:"inside",					
+					cont_nav:true,
+					shuffle:false,
+					mousewheel_scroll:true
+				});
+				
+				//initialize lightbox for scroller
+				$("a[rel='scroller']").wtLightBox({
+					rotate:true,
+					delay:4000,
+					duration:600,
+					display_dbuttons:true,
+					display_number:true,					
+					display_timer:true,
+					display_caption:true,
+					caption_position:"outside",					
+					cont_nav:true,
+					auto_fit:true,
+					easing:"",
+					type:"GET"
+				});
+			}
+			
+		);
+	</script>
+</head>
+<body>	
+<div class="container">
+	<div class="wt-scroller">
+        <div class="prev-btn"></div>          
+  		<div class="slides">
+            <ul>
+            	<li>
+                	<a href="images/scottwills_plant.jpg" rel="scroller"><img src="images/thumbs/scottwills_plant.jpg" alt=""/></a>    
+    	           	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus nunc, tempus sed porta et.</p>
+              	</li>
+                <li>                        	
+                    <a href="http://codecanyon.net?boxtype=iframe&boxwidth=720&boxheight=460" rel="scroller"><img src="images/thumbs/madness_arch2.jpg" alt=""/></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id sollicitudin lorem.</p>
+              	</li>
+                <li>
+                	<a href="images/triworks_abstract27.jpg" rel="scroller"><img src="images/thumbs/triworks_abstract27.jpg" alt=""/></a>
+                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis enim non magna bibendum malesuada.</p>    
+              	</li>
+                <li>                    
+                    <a href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf?boxwidth=720&boxheight=460" rel="scroller"><img src="images/thumbs/scottwills_building2.jpg" alt=""/></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus nunc, tempus sed porta et.</p>                  
+              	</li>              
+                <li>
+                	<a href="images/triworks_abstract32.jpg" rel="scroller"><img src="images/thumbs/triworks_abstract32.jpg" alt=""/></a>
+                  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis enim non magna bibendum malesuada.</p>    
+              	</li>
+                <li>
+                    <a href="#ex?boxwidth=800&boxheight=295" rel="scroller"><img src="images/thumbs/kariminal_mountain.jpg" alt=""/></a>                           
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id sollicitudin lorem.</p>                    
+	           	</li>
+                <li>
+                	<a href="images/moo10.jpg" rel="scroller"><img src="images/thumbs/moo10.jpg" alt=""/></a>                 	
+                   	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus nunc, tempus sed porta et.</p>                        	                   
+              	</li>
+                <li>                        
+                    <a href="http://activeden.net?boxtype=iframe&boxwidth=720&boxheight=460" rel="scroller"><img src="images/thumbs/triworks_abstract17.jpg" alt=""/></a>
+                   	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus nunc, tempus sed porta et.</p>
+              	</li>
+                <li>   
+                	<a href="images/triworks_arch1.jpg" rel="scroller"><img src="images/thumbs/triworks_arch1.jpg" alt=""/></a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis enim non magna bibendum malesuada.</p>                    
+              	</li> 
+            </ul>
+        </div>          	
+     	<div class="next-btn"></div>
+        <div class="lower-panel"></div>
+	</div>
+</div>
+
+<!-- example inline content -->
+<div id="ex" style="display:none">
+<table width="800" cellpadding="0" cellspacing="0" class="ex">
+<tr>
+    <th>Item</th>
+    <th>Quantity</th>     
+    <th>Price</th>
+    <th>Total</th>   
+</tr>
+<tr class="odd">
+    <td>apple</td>
+    <td>4</td>
+    <td>$0.50</td>
+    <td>$2.00</td>        
+</tr>
+<tr class="even">
+    <td>milk</td>
+    <td>2</td>
+    <td>$3.00</td>
+    <td>$6.00</td>        
+</tr>
+<tr class="odd">
+    <td>orange juice</td>
+    <td>4</td>
+    <td>$0.50</td>
+    <td>$2.00</td>        
+</tr>
+<tr class="even">
+    <td>banana</td>
+    <td>8</td>
+    <td>$0.25</td>
+    <td>$2.00</td>        
+</tr>
+<tr class="odd">
+    <td>soda</td>
+    <td>6</td>
+    <td>$0.75</td>
+    <td>$4.50</td>        
+</tr>
+<tr class="even">
+    <td>bread</td>
+    <td>2</td>
+    <td>$1.00</td>
+    <td>$2.00</td>        
+</tr>
+<tr class="odd">
+    <td>tomato</td>
+    <td>4</td>
+    <td>$0.50</td>
+    <td>$2.00</td>        
+</tr>
+<tr class="even">
+    <td>fish</td>
+    <td>2</td>
+    <td>$6.00</td>
+    <td>$12.00</td>        
+</tr>
+<tr>
+    <td colspan="3"></td>
+    <td>$32.50</td>        
+</tr>
+</table>
+</div>
+</body>
+</html>

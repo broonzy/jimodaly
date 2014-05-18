@@ -1,0 +1,698 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Help Guide</title>
+<style type="text/css">
+body{
+font-family:Arial, Helvetica, sans-serif;
+background-color:#888;
+text-align:center;		
+}
+a, a:visited{
+color:#06F;
+}
+.container{
+width:900px;
+height:100%;
+color:#000;
+background-color:#FFF;
+padding:50px;
+margin:0 auto;
+text-align:left;
+}
+.section{
+clear:both;
+margin-bottom:35px;
+}
+pre{
+margin:5px;
+overflow:auto;
+padding:10px;
+color:#06F;
+line-height:1.5em;
+background-color:#EAEAEA;
+border:1px solid #666;
+width:868px;
+}
+pre .attr{
+color:#F0F;
+}
+pre .str{
+color:#808;
+}
+pre .b-str{
+color:#808;
+font-weight:bold;
+}
+pre .num{
+color:#00F;
+}
+pre .bool{
+color:#F00;
+}
+pre .txt{
+color:#000;
+}
+pre .cmt{
+color:#666;
+}
+table{
+border:1px solid #666;
+border-collapse:collapse;
+border-spacing:0;
+margin:5px;
+}
+th{
+background-color:#E6E6E6;
+border:1px solid #666;
+padding: 6px 12px;
+text-align:left;
+vertical-align:top;	
+}
+tr.even td{
+background-color:#E5ECF9;
+}
+tr.odd td{
+background-color:#FFF;
+}
+td{
+border:1px solid #666;
+padding: 6px 12px;
+text-align:left;
+vertical-align:top;
+}
+em{
+font-weight:bold;
+}
+h1, h2, h3{
+color:#000;
+margin-top:28px;
+margin-bottom:15px;
+}
+hr{
+color:#CCC;
+background-color:#CCC;
+height:1px;
+border:none;
+}
+hr.sub{
+color:#fff; 
+background-color:#fff; 
+border:1px dotted #ccc; 
+border-style:none none dashed;
+margin-top:20px;
+}
+.ver{
+font-weight:normal;
+}
+.back-top{
+font-size:12px;
+float:right;
+}
+.tag{
+font-style:italic;
+}
+.file{
+font-style:italic;
+font-weight:bold;
+}
+.param{
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<div class="container" id="top">
+    <div class="section">
+    	<h2>jQuery Image Scroller <span class="ver">(v1.4)</span> - Help Guide</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#content">Adding Content</a></li>
+            <li><a href="#lightbox">Adding Different Lightbox Content</a></li>
+            <li><a href="#params">Plugin Parameters</a></li>
+            <li><a href="#contact">Contact Info</a></li>
+        </ul>
+    </div>
+    <a name="overview"></a><hr/>
+	<div class="section">
+    	<h2>1. Overview:</h2>
+	   	<p>
+            This is a jQuery image scroller with lightbox.
+            The scroll bar/indexes and directional buttons allow for easy navigation of your image gallery.
+            Image click can either open the included lightbox or a regular link. 
+            The scroller is also re-sizable and fully configurable through the plugin's parameters.
+        </p>
+        <strong>Features:</strong><br/>
+        <ul>
+            <li>Configurable number of slides visible per scroll. (i.e. the demo is showing 3 slides per scroll)</li>
+            <li>Can turn auto scroll rotation on/off. Auto scroll is paused on mouseover.</li>
+            <li>Images can be scaled to fit in slide window.</li>
+            <li>Configurable text caption, including positioning inside/outside and top/bottom.</li>
+            <li>Captions allow for html description, including embedding links.</li>                       
+            <li>Able to add unlimited number of images.</li>
+            <li>Use scroll bar to navigate. Images auto stop to its nearest position. Also, scroll bar's track is clickable.</li>
+            <li>Alternatively, use the indexes instead of scroll bar for navigation.</li>
+            <li>Can set images in random order.</li>
+            <li>Touchscreen and mousewheel scroll supported.</li>
+            <li>Lightbox plugin included, can be used seperately from scroller on any links.</li>
+            <li>Lightbox's rotation is available.</li>
+            <li>Lightbox is automatically positioned and fitted accordingly to browser window.</li>
+            <li>Lightbox supports image, iframe, ajax, flash, and inline content.</li>                
+        </ul>
+      	<a href="#top" class="back-top">back to top</a>       
+	</div>
+	<a name="installation"></a><hr/>
+	<div class="section">
+		<h2>2. Installation:</h2>
+		<p>Installing the scroller within your html page requires the following steps.</p>
+    	<ol>
+        	<li>Including the scroller's and lightbox's css files.</li>
+        	<li>Including the required javascript files.</li>	        
+    	    <li>Specifying the html tags of the scroller within your page.</li>
+        	<li>Instantiating a javascript function call with any optional parameters.</li>
+	    </ol>
+    	<p>Below describes these steps in more detail.</p>
+        <p>
+            In step 1, to include the css files <em>wt-scroller.css</em> and <em>wt-lightbox.css</em>, simply specify the following lines of code 
+           	within your <i>&lt;head&gt;</i> tag:
+        </p>
+<pre>
+&lt;link <span class="attr">rel</span>=<span class="str">"stylesheet"</span> <span class="attr">type</span>=<span class="str">"text/css"</span> <span class="attr">href</span>=<span class="str">"wt-scroller.css"</span>/&gt;
+&lt;link <span class="attr">rel</span>=<span class="str">"stylesheet"</span> <span class="attr">type</span>=<span class="str">"text/css"</span> <span class="attr">href</span>=<span class="str">"lightbox/wt-lightbox.css"</span>/&gt;
+</pre>
+
+	    <p>
+        	In step 2, you will need to include the jquery's library 
+	    	file, <em>jquery-1.7.1.min.js</em> and jquery's UI file,
+            <em>jquery-ui-1.8.10.custom.min.js</em>.
+            Also, you will need to include the scroller's js file named 
+    		<em>jquery.wt-scroller.min.js</em> and the optional lightbox's js file, <em>jquery.wt-lightbox.min.js</em> if you plan on using the lightbox. 
+    		All files are located within the <em>js</em> directory.<br/> 
+   	 		The code below shows how to include them in a html page:
+	  	</p>
+<pre>
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span> <span class="attr">src</span>=<span class="str">"js/jquery-1.7.1.min.js"</span>&gt;&lt;/script&gt;
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span> <span class="attr">src</span>=<span class="str">"js/jquery-ui-1.8.10.custom.min.js"</span>&gt;&lt;/script&gt;
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span> <span class="attr">src</span>=<span class="str">"lightbox/js/jquery.wt-lightbox.min.js"</span>&gt;&lt;/script&gt;
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span> <span class="attr">src</span>=<span class="str">"js/jquery.wt-scroller.min.js"</span>&gt;&lt;/script&gt;
+</pre>
+		<p>
+            <b>note:</b> the js files with <em>min</em> in its file names are the compressed production versions of the files.
+            If you intend to modify the source code, you will need to look at the non-min development versions of the files 
+            and it is recommended that you minify the modified files afterwards.
+        </p>
+        
+        <p>
+            In step 3, to specify the tags of the scroller itself, refer to the example in the 
+            <em>index.html</em> file. In that file, you'll see a block of tag starting and ending with:
+        </p>
+<pre>
+&lt;div <span class="attr">class</span>=<span class="str">"container"</span>&gt;
+   &lt;div <span class="attr">class</span>=<span class="str">"wt-scroller"</span>&gt;
+      <span class="txt">...</span>
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        <p>
+            You can use this as a template and copy and paste it onto your own page, but
+            will have to modify it accordingly with your own image information. <a href="#content">Section 3</a> will describe this step in detail.
+        </p>
+        <p>
+            Finally in step 4, you will need to instantiate a javascript function call to get the scroller initialized.
+            An additional javascript function call to initial the lightbox is needed only if the lightbox is used.
+            The example code looks like this below:
+        </p>
+<pre>
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span>&gt;<span class="txt">
+$(document).ready(
+   function() {
+      <span class="cmt">//initialize scroller</span>
+      $(<span class="str">".container"</span>).wtScroller();
+      
+      <span class="cmt">//initialize lightbox for scroller</span>
+      $(<span class="str">"a[rel='scroller']"</span>).wtLightBox();
+   }
+);</span>
+&lt;/script&gt;
+</pre>
+        <p>
+            This will instantiate the scroller and lightbox using the default parameters.
+            <a href="#params">Section 5</a> will describe instantiation with custom parameters.
+        </p>
+        <a href="#top" class="back-top">back to top</a>
+</div>
+<a name="content"></a><hr/>
+<div class="section">
+		<h2>3. Adding Content:</h2>
+        <p>
+            In order to add or change content to the scroller, 
+            you will have to specify a set of tags for each image within the scroller's html tags. 
+            The list of images is represented as a list tag <i>&lt;ul&gt;</i> and 
+            each image is represented by a list item tag <i>&lt;li&gt;</i>.
+        </p>
+		<p>
+            Below is an example of what the tags would look like for an image. 
+            You will have to repeat this for as many images as needed for your scroller.
+        </p>
+<pre>
+&lt;li&gt;
+    &lt;a <span class="attr">href</span>=<span class="str">"images/image1.jpg"</span> <span class="attr">rel</span>=<span class="str">"scroller"</span>&gt;
+        &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/thumb1.jpg"</span>/&gt;
+    &lt;/a&gt;    
+    &lt;p&gt;<span class="txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consequat.</span>&lt;/p&gt;
+&lt;/li&gt;
+</pre>
+	<p>
+		The example above shows that each image entry begins with an opening and closing <i>&lt;li&gt;</i> tag. 
+		Within the <i>&lt;li&gt;</i> tag, there is an <i>&lt;a&gt;</i> tag
+		specifying an image's url as its <b>href</b> value.  This is the image url use for the lightbox if lightbox is used. 
+        Also, the attribute <b>rel</b> within the <i>&lt;a&gt;</i> tag is used purely to mark links for the lightbox.  The value for <b>rel</b> can be anything as
+        long as it matches the lightbox initialization call as shown later in <a href="#params">Section 5</a>. 
+  	</p>
+    <p>      
+        If you are not planning on using the lightbox, you can specify instead a regular link to be opened when the image is
+        clicked.  You can also specify a link <b>target</b> here.   
+  		In addition, if you do not wish to have a link associated with the image, you can omit this <i>&lt;a&gt;</i> altogether.
+   	</p>
+	<p>
+		Next, within the <i>&lt;a&gt;</i> tag, there is an <i>&lt;img&gt;</i> representing the slide's image.
+	</p>
+    <p>
+    	And finally, the <i>&lt;p&gt;</i> tag represents the caption associated with the slide. 	        
+        You can specify text description within the tags. If you do not want a caption with a particular slide,  you can omit the <i>&lt;p&gt;</i> tag.
+	</p>
+    <a href="#top" class="back-top">back to top</a>
+</div>
+
+<a name="lightbox"></a><hr/>
+<div class="section">
+	<h2>4. Adding Different Lightbox Content:</h2>
+    <p>
+		This section will describe how to add different types of content for the lightbox.
+        Currently, the lightbox supports image, flash, iframe, ajax, and inline content.
+   	</p>
+    <p>
+        Since the lightbox works on links (<span class="tag">&lt;a&gt;</span> tags), 
+        you will need to assign a value to the href attribute as to where to locate the specific content.
+	</p>
+    <hr class="sub"/>
+    <p>
+        First, to add an image to the lightbox, 
+        you will need to assign the url of your image to the href attribute of the <span class="tag">&lt;a&gt;</span> tag.
+   	</p>
+    <p>
+        Below shows an example of using image for the lightbox.
+    </p>
+<pre>
+&lt;a <span class="attr">href</span>=<span class="b-str">"images/example.jpg"</span>&gt;
+    &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/thumb1.jpg"</span>/&gt;
+&lt;/a&gt; 
+</pre>
+	<hr class="sub"/>
+    <p>
+       	To add flash content to the lightbox, 
+        you will need to assign the url of your swf file to the href attribute of the <span class="tag">&lt;a&gt;</span> tag.
+        You can also assign a specific width and height value by using the url variable of boxwidth and boxheight.
+   	</p>
+    <p>
+        Below shows an example of using flash for the lightbox with a set width and height.
+    </p>
+<pre>
+&lt;a <span class="attr">href</span>=<span class="b-str">"swf/example.swf?boxwidth=800&amp;boxheight=600"</span>&gt;
+    &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/thumb1.jpg"</span>/&gt;
+&lt;/a&gt; 
+</pre>
+	<hr class="sub"/>
+    <p>
+        To add inline content to the lightbox, 
+        you will need to assign the id name to the href attribute of the <span class="tag">&lt;a&gt;</span> tag.
+        The id name should reference the id of a tag in your page where you want the html content to come from.
+        Again, you can assign a width and height value by using the url variable of boxwidth and boxheight.
+   	</p>
+    <p>
+        Below shows an example of using inline content for the lightbox. Be sure to include # sign in front of the id name.
+    </p>
+<pre>
+&lt;a <span class="attr">href</span>=<span class="b-str">"#exampleid?boxwidth=800&amp;boxheight=600"</span>&gt;
+    &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/thumb1.jpg"</span>/&gt;
+&lt;/a&gt;  
+</pre>
+	<hr class="sub"/>
+    <p>
+        To add an iframe to the lightbox, 
+        you will need to assign an url to the href attribute of the <span class="tag">&lt;a&gt;</span> tag.
+        Also, you need to specify an url variable named boxtype and assign it the value iframe.
+        Again, you can assign a width and height value by using the url variable of boxwidth and boxheight.
+   	</p>
+    <p>
+        Below shows an example of using iframe for the lightbox.
+    </p>
+<pre>
+&lt;a <span class="attr">href</span>=<span class="b-str">"http://www.codecanyon.net?boxtype=iframe&amp;boxwidth=800&amp;boxheight=600"</span>&gt;
+    &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/thumb1.jpg"</span>/&gt;
+&lt;/a&gt;
+</pre>
+	<hr class="sub"/>
+   	<p>
+        Finally, to add an ajax page to the lightbox, 
+        you will need to assign your ajax page url to the href attribute of the <span class="tag">&lt;a&gt;</span> tag.
+        Also, you need to specify an url variable named boxtype and assign it the value ajax.
+        Furthermore, you can add other request variables at the end of the url for your ajax page to process.
+   	</p>
+    <p>
+        Below shows an example of using ajax for the lightbox.
+    </p>
+<pre>
+&lt;a <span class="attr">href</span>=<span class="b-str">"example.php?boxtype=ajax&amp;boxwidth=800&amp;boxheight=600&amp;var1=abc&amp;var2=def"</span>&gt;
+    &lt;img <span class="attr">src</span>=<span class="str">"images/thumbs/thumb1.jpg"</span>/&gt;
+&lt;/a&gt;  
+</pre>
+	<a href="#top" class="back-top">back to top</a>
+</div>
+<a name="params"></a><hr/>
+<div class="section">
+	<h2>5. Plugin Parameters:</h2>
+    <p>
+		You can change some common attributes of the scroller and lightbox through their plugin parameters. 
+    	Below is an example of the attributes being specified with corresponding values.
+    </p>
+<pre>
+&lt;script <span class="attr">type</span>=<span class="str">"text/javascript"</span>&gt;<span class="txt">
+$(document).ready(	
+    function() {
+    	<span class="cmt">//initialize scroller</span>
+        $(<span class="str">".container"</span>).wtScroller({
+            num_display:<span class="num">3</span>,
+            slide_width:<span class="num">300</span>,
+            slide_height:<span class="num">200</span>,
+            slide_margin:<span class="num">1</span>,
+            button_width:<span class="num">35</span>,
+            ctrl_height:<span class="num">25</span>,
+            margin:<span class="num">10</span>,    
+            auto_scroll:<span class="bool">true</span>,
+            delay:<span class="num">4000</span>,
+            scroll_speed:<span class="num">1000</span>,
+            easing:<span class="str">""</span>,
+            auto_scale:<span class="bool">true</span>,
+            move_one:<span class="bool">false</span>,
+            ctrl_type:<span class="str">"scrollbar"</span>,
+            display_buttons:<span class="bool">true</span>,
+            mouseover_buttons:<span class="bool">false</span>,
+            display_caption:<span class="bool">true</span>,
+            mouseover_caption:<span class="bool">false</span>,
+            caption_effect:<span class="str">"slide"</span>,            
+            caption_align:<span class="str">"bottom"</span>,
+            caption_position:<span class="str">"inside"</span>,                    
+            cont_nav:<span class="bool">true</span>,
+            shuffle:<span class="bool">false</span>,
+            mousewheel_scroll:<span class="bool">true</span>
+        });
+		
+        <span class="cmt">//initialize lightbox for scroller</span>	
+        $(<span class="str">"a[rel='scroller']"</span>).wtLightBox({
+            rotate:<span class="bool">true</span>,
+            delay:<span class="num">4000</span>,
+            duration:<span class="num">600</span>,
+            display_number:<span class="bool">true</span>,
+            display_dbuttons:<span class="bool">true</span>,
+            display_timer:<span class="bool">true</span>,
+            display_caption:<span class="bool">true</span>,
+            caption_position:<span class="str">"outside"</span>,
+            cont_nav:<span class="bool">true</span>,
+            auto_fit:<span class="bool">true</span>,
+            easing:<span class="str">""</span>,
+            type:<span class="str">"GET"</span>
+        });
+    }
+);</span>
+&lt;/script&gt;
+</pre>
+        <p>
+            <b>note:</b> 
+            if you want to leave a parameter with its default value, you can omit that parameter in the javascript call.
+        </p>
+        <p>
+            The table below describes each attribute in more detail:
+        </p>    
+    	<h3>Scroller's Parameters Table:</h3>
+        <table border="0" cellpadding="3" cellspacing="3">
+        <tr>
+            <th>Attribute Name</th>
+            <th>Description</th>
+            <th>Default Value</th>
+            <th>Possible Values</th>
+        </tr>
+        <tr class="odd">
+            <td>num_display</td>
+            <td>The number of slide displayed at a time.</td>
+            <td>3</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>slide_width</td>
+            <td>The width of each slide.</td>
+            <td>300</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="odd">
+            <td>slide_height</td>
+            <td>The height of each slide.</td>
+            <td>200</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>slide_margin</td>
+            <td>The margin between each slide.</td>
+            <td>1</td>
+            <td>Any number.</td>
+        </tr>
+         <tr class="odd">
+            <td>button_width</td>
+            <td>The width of the directional buttons.</td>
+            <td>35</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="even">
+            <td>ctrl_height</td>
+            <td>The height of the scrollbar or index bar.</td>
+            <td>25</td>
+            <td>Any positive number.</td>
+        </tr>
+        <tr class="odd">
+            <td>margin</td>
+            <td>
+            	The margin around the scroller.<br/> 
+            	<b>note:</b> The left and right margin is not use if the directional buttons are displayed.
+            	Also, the bottom margin is not use if either the scrollbar or index bar is displayed.
+            </td>
+            <td>10</td>
+            <td>Any number.</td>
+        </tr>     
+        <tr class="even">
+            <td>auto_scroll</td>
+            <td>Specify if auto scroll rotation is on.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>delay</td>
+            <td>The time delay in milliseconds for auto scroll rotation.</td>
+            <td>4000</td>
+            <td>Any positive number.</td>
+        </tr>    
+        <tr class="even">
+            <td>scroll_speed</td>
+            <td>The scrolling speed in milliseconds.</td>
+            <td>1000</td>
+            <td>Any positive number.</td>
+        </tr>     
+        <tr class="odd">
+            <td>easing</td>
+            <td>The easing used for scrolling transition.</td>
+            <td>""</td>
+           	<td>
+            	Please visit <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing Plugin</a> for a list of all available easing.
+            </td>
+        </tr> 
+        <tr class="even">
+            <td>auto_scale</td>
+            <td>Specifies if slide images are automatically scaled to fit centerly within slide window.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>        
+        <tr class="odd">
+            <td>move_one</td>
+            <td>Specifies if slides move by one per scroll.<br/> 
+            	<b>note:</b> Move by one does not apply when ctrl_type is set to index.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>      
+        <tr class="even">
+            <td>ctrl_type</td>
+            <td>Specifies the type of navigation control used for the lower panel of the scroller.</td>
+            <td>"scrollbar"</td>
+            <td>"scrollbar", "index", "none"</td>
+        </tr>       
+        <tr class="odd">
+            <td>display_buttons</td>
+            <td>To specify if the directional buttons are visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>mouseover_buttons</td>
+            <td>To specify if the directional buttons appears on mouseover and hides on mouseout.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>       
+        <tr class="odd">
+            <td>display_caption</td>
+            <td>To specify if the slide captions are visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>mouseover_caption</td>
+            <td>To specify if the captions appears on mouseover and hides on mouseout.<br/> 
+            	<b>note:</b> Mouseover only works if caption_position is inside.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>caption_effect</td>
+            <td>The caption effect used for mouseover caption.</td>
+            <td>"slide"</td>
+            <td>"slide", "fade", "none".</td>
+        </tr>
+        <tr class="even">
+            <td>caption_align</td>
+            <td>The alignment of the captions.</td>
+            <td>"bottom"</td>
+            <td>"top", "bottom".</td>
+        </tr>
+        <tr class="odd">
+            <td>caption_position</td>
+            <td>The position of the captions.</td>
+            <td>"inside"</td>
+            <td>"inside", "outside".</td>
+        </tr>        
+        <tr class="even">
+            <td>cont_nav</td>
+            <td>Specifies if the directional buttons allow for continuous navigation.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>        
+        <tr class="odd">
+            <td>shuffle</td>
+            <td>To specify if slides are in random order.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>mousewheel_scroll</td>
+            <td>To specify if mousewheel scroll is enabled.</td>
+            <td>false</td>
+            <td>true, false.</td>
+        </tr>      
+        </table>
+    
+		<a name="lightbox"></a><h3>Lightbox's Parameters Table:</h3>       	
+        <table border="0" cellpadding="3" cellspacing="3">
+        <tr class="header">
+            <th>Attribute Name</th>
+            <th>Description</th>
+            <th>Default Value</th>
+            <th>Possible Values</th>
+        </tr>  
+        <tr class="odd">
+            <td>rotate</td>
+            <td>Specifies if image rotation is on.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>delay</td>
+            <td>The time delay in milliseconds for image rotation.</td>
+            <td>4000</td>
+            <td>Any positive number.</td>
+        </tr>    
+        <tr class="odd">
+            <td>duration</td>
+            <td>The duration in milliseconds for change transition.</td>
+            <td>600</td>
+            <td>Any positive number.</td>
+        </tr>    
+        <tr class="even">
+            <td>display_number</td>
+            <td>Specifies if the image number is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>display_dbuttons</td>
+            <td>Specifies if the directional buttons are visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>display_timer</td>
+            <td>Specifies if the delay timer bar is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>                 
+        <tr class="odd">
+            <td>display_caption</td>
+            <td>Specifies if the caption box is visible.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>caption_position</td>
+            <td>The position of the caption box.</td>
+            <td>"outside"</td>
+            <td>"inside", "outside".</td>
+        </tr>
+        <tr class="odd">
+            <td>cont_nav</td>
+            <td>Specifies if the directional buttons allow for continuous navigation.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="even">
+            <td>auto_fit</td>
+            <td>Specifies if the lightbox auto scale to fit browser window.</td>
+            <td>true</td>
+            <td>true, false.</td>
+        </tr>
+        <tr class="odd">
+            <td>easing</td>
+            <td>Specifies the easing used for content change transition.</td>
+            <td>""</td>
+ 			<td>
+            	Please visit <a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing Plugin</a> for a list of all available easing.
+            </td>
+        </tr>
+        <tr class="even">
+            <td>type</td>
+            <td>Used only if using ajax, specifies if request is by get or post.</td>
+            <td>"GET"</td>
+            <td>"GET", "POST".</td>
+        </tr>        
+        </table>
+        <br/>
+        <a href="#top" class="back-top">back to top</a>
+    </div>
+	<a name="contact"></a><hr/>
+    <div class="section">
+        <h2>Contact Information:</h2>
+        <p>
+            For help or questions regarding this file,
+            please contact me using the email form on my <a href="http://codecanyon.net/user/webtako" target="_blank">profile page</a>.           
+        </p>
+        <a href="#top" class="back-top">back to top</a>
+	</div>
+</div>
+</body>
+</html>

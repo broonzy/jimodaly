@@ -1,0 +1,363 @@
+/* tip on removing borders from images that link taken from http://meyerweb.com/eric/tools/css/reset */
+img {
+	border: 0;
+}
+#mainwrapper {
+	height: 770px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#left_upr {
+	float: left;
+	height: 192px;
+	width: 42px;
+	border-right-width: 8px;
+	border-right-style: solid;
+	border-right-color: #4C4A41;
+	background-color: #FFF;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	border-bottom-color: #4C4A41;
+}
+#top {
+	height: 30px;
+	width: 600px;
+	float: left;
+	background-color: #FFF;
+}
+#navbar {
+	float: left;
+	height: 60px;
+	width: 540px;
+	padding-left: 60px;
+	background-color: #FFF;
+}
+
+/* css for simple nav bar taken from http://www.handy-html.com/create-a-simple-css-dropdown-menu */
+ul {
+    font-family: "Trebuchet MS", Arial, Verdana;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul li {
+    display: block;
+    position: relative;
+    float: left;
+}
+li ul {
+    display: none;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+    padding: 5px 28px 5px 28px;
+    background: #ABB8BD;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+ul li a:hover {
+background: #ABB8BD;
+}
+li:hover ul {
+    display: block;
+    position: absolute;
+}
+li:hover li {
+    float: none;
+    font-size: 11px;
+}
+li:hover a { background: #3b3b3b; }
+li:hover li a:hover {
+    background: #1e7c9a;
+}
+#right_side {
+	height: 750px;
+	width: 50px;
+	float: right;
+}
+#glass_lwr_left {
+
+	float: left;
+	height: 550px;
+	width: 170px;	
+}
+#glass_main {
+	background-image: url(images/glass_main.jpg);
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 550px;
+	width: 430px;
+}
+#glass_main_contact {	
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 550px;
+	width: 430px;
+}
+#glass_main_FB_top {
+	background-image: url(images/glass_main_FB_top.jpg);
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 406px;
+	width: 430px;
+}
+#glass_main_FB {
+	float: left;
+	height: 43px;
+	width: 430px;
+}
+#glass_main_FB_btm {	
+	height: 101px;
+	width: 430px;
+}
+#glass_main_map {
+	background-image: url(images/glass_main_map.png);
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 550px;
+	width: 430px;
+}
+#glass_gallery_top {	
+	float: left;
+	height: 340px;
+	width: 430px;
+}
+#glass_gallery_btm {
+	background-image: url(images/glass_gallery_btm.jpg);
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 210px;
+	width: 430px;
+}
+#glass_main_left {
+	
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 160px;
+	width: 215px;
+}
+#glass_main_right {	
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 100px;
+	width: 215px;
+	padding-top: 60px;
+}
+#glass_main_btm{	
+	float: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	height: 390px;
+	width: 430px;
+}
+.heading1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
+	font-style: italic;
+}
+.text {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	line-height: 14pt;
+	padding-left: 10px;
+}
+.formpadding {
+	padding-left: 10px;
+}
+.formtext {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 10px;
+	color: #585858;
+}
+.textright {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: right;
+	line-height: 14pt;
+	padding-left: 10px;
+}
+.textheading {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	color: #039;
+	padding-left: 10px;
+	text-decoration: none;
+}
+.textheadingright {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 22px;
+	color: #039;
+	text-align: right;
+	padding-left: 10px;
+	text-decoration: none;
+}
+.textheading a:hover  {
+	text-decoration: none;
+	color: #ff5533;
+}
+.textheading a:link {
+	text-decoration: none;
+}
+.textheading a:visited {
+	text-decoration: none;	
+}
+.textheading a:active {
+	text-decoration: none;	
+}
+.textheadingsml {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 16px;
+	color: #039;
+	padding-left: 10px;
+}
+#galleries1 {
+	background-color: #FFF;
+	float: left;
+	height: 390px;
+	width: 250px;
+	padding-top: 60px;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #666;
+	font-size: 12px;
+}
+#signature {
+	float: left;
+	height: 100px;
+	width: 250px;
+}
+#logo {
+	float: left;
+	height: 200px;
+	width: 200px;
+	background-color: #FFF;
+}
+#button1 {
+	height: 70px;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#button2 {
+	height: 70px;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#button3 {
+	height: 70px;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#button4 {
+	height: 70px;
+	width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.button1 {
+	margin-bottom: 15px;
+}
+.button2 {
+	margin-bottom: 80px;
+}
+.center {   
+	display: block;   
+	margin-left: auto;   
+	margin-right: auto; 
+}
+#header {
+	float: left;
+	height: 110px;
+	width: 600px;
+	background-color: #FFF;
+}
+body {
+	background-color: #CCC;
+}
+#footer {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: center;
+	height: 10px;
+	width: 900px;
+	padding-top: 10px;
+	float: left;
+}
+input:focus, textarea:focus{  
+background-color: #F5FFFA;  
+} 
+
+/* Franks Form css */
+					
+#emailTip 			{	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+						color: red;
+						display: none;
+					}
+
+#firstnameTip 			{	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+						color: red;
+						display: none;
+					}
+
+#lastnameTip 			{	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+						color: red;
+						display: none;
+					}
+
+a{
+	text-decoration:none;
+	color:#f30;	
+}
+p{
+	clear:both;
+	margin:0;
+	padding:.5em 0;
+}
+pre{
+	display:block;
+	font:100% "Courier New", Courier, monospace;
+	padding:10px;
+	border:1px solid #bae2f0;
+	background:#e3f4f9;	
+	margin:.5em 0;
+	overflow:auto;
+	width:800px;
+}
+
+/*  */
+
+#preview{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:5px;
+	display:none;
+	color:#fff;
+	}
